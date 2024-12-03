@@ -1,4 +1,4 @@
-const { capitalize, reverseString, Calculator, caesarCipher } = require('./jestTestSuite');
+const { capitalize, reverseString, Calculator, caesarCipher, analyzeArray } = require('./jestTestSuite');
 
 test('Capitalize star to Star', () => {
     expect(capitalize('star')).toEqual('Star');
@@ -26,4 +26,8 @@ test('Divide 1 and 2 to equal 0', () => {
 
 test('Caesar AB,YZ 3', () => {
     expect(caesarCipher('AB,YZ', 3)).toEqual('DE,AB');
+})
+
+test('Analyze Array [1,2,3]', () => {
+    expect(analyzeArray([1,2,3]).min).toEqual(1);
 })
